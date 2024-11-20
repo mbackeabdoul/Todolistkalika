@@ -12,7 +12,7 @@ const ListeTaches = () => {
   const [tacheEnEdition, setTacheEnEdition] = useState(null);
 
   const [pageActuelle, setPageActuelle] = useState(1);
-  const tachesParPage = 5;
+  const tachesParPage = 1;
 
   useEffect(() => {
     localStorage.setItem('taches', JSON.stringify(taches));
@@ -72,7 +72,6 @@ const ListeTaches = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-4">
-      {/* Barre de recherche et bouton Ajouter */}
       <div className="flex mb-4 flex-wrap gap-2">
         <input
           type="text"
