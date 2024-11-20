@@ -73,7 +73,7 @@ const ListeTaches = () => {
   return (
     <div className="max-w-4xl mx-auto p-4">
       {/* Barre de recherche et bouton Ajouter */}
-      <div className="flex mb-4">
+      <div className="flex mb-4 flex-wrap gap-2">
         <input
           type="text"
           placeholder="Rechercher une tâche"
@@ -82,11 +82,11 @@ const ListeTaches = () => {
             setRecherche(e.target.value);
             setPageActuelle(1);
           }}
-          className="flex-grow mr-2 p-2 border rounded"
+          className="flex-grow sm:w-1/2 md:w-2/3 p-2 border rounded"
         />
         <button
           onClick={() => setModalOuvert(true)}
-          className="bg-blue-500 text-white p-2 w-40 rounded"
+          className="bg-blue-500 text-white p-2 w-full sm:w-auto md:w-40 rounded"
         >
           Ajouter
         </button>
@@ -171,7 +171,7 @@ const ListeTaches = () => {
       {/* Modal */}
       {modalOuvert && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg w-96">
+          <div className="bg-white p-6 rounded-lg w-full sm:w-96 md:w-1/3">
             <h2 className="text-xl mb-4">
               {tacheEnEdition ? 'Modifier la tâche' : 'Ajouter une tâche'}
             </h2>
